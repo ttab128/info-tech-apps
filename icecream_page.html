@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Page1</title>
+<style type="text/css">
+
+body {
+	font-family: comic sans ms;
+	font-size: 1.5em;
+	text-align: center;
+	color: darkred;
+	background-image: url( "http://newton.ncc.edu/gansonj/ite154/img/ice_cream_bkg.jpg" );
+}
+#contentwrap {
+	border: 6px blue solid;
+	padding: 30px;
+	background-image: url( "http://newton.ncc.edu/gansonj/ite154/img/rainbow.png" );
+	border-radius: 25px;
+	width: 650px;
+	margin: 40px auto 0px auto;
+}
+#heading {
+	font-family: arial;
+	font-size: 2em;
+	
+}
+#formwrap {
+	background-color: white;
+	border: 6px #0033cc double;
+	border-radius: 15px;
+	padding: 20px;
+}
+.formfield {
+	background-color: lightblue;
+	color: darkred;
+	padding: 4px;
+	border: 4px red double;
+	width: 200px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="contentwrap">
+	<div id="heading">
+		Ice Cream Online Order Form
+	</div>
+		<div id="formwrap">
+			<form>
+				<div class="formtext">Enter flavor</div>
+				<input type="text" size="30" class="formfield">
+
+				<div class="formtext">Select Size</div>
+				<select class="formfield">
+				
+					<option>Small</option>
+					<option>Medium</option>
+					<option>Large</option>
+					<option>Colossal</option>
+				</select>
+				
+				<div class="formtext">Choose Toppings</div>
+				<div><input type="checkbox" size="30">Sprinkles</div>
+				<div><input type="checkbox" size="30">Hot Fudge</div>
+				
+				<input type="button" value="Place Order" id="mybutton">
+
+			</form>
+		</div>
+
+
+</div><!-- ENDS CONTENTWRAP -->
+</body>
+</html>

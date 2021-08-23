@@ -1,0 +1,90 @@
+<html>
+
+<head>
+<style type="text/css">
+#bodystyle {
+	font-family: arial;
+	text-align: center;
+	background-image: url( "http://newton.ncc.edu/~gansonj/ite154/img/bkgimg.jpg" )
+}
+
+#contentwrap {
+	border: 6px red double;
+	background-color: white;
+	margin: 30px auto 20px auto;
+	width: 600px;
+}
+
+#contentwrap2 {
+	border: 8px red inset;
+	background-color: white;
+}
+
+#heading {
+	background-color: darkred;
+	color: white;
+	font-size: 3.5em;
+	padding: 12px 0px 12px 0px;
+	<!--padding: top - right - bottom - left -->
+	margin: 17.5px;
+}
+
+#imgdiv {
+	background-color: lightblue;
+}
+#footer {
+	background-color: black;
+	color: yellow;
+	font-size: 3.5em;
+	padding: 17.5px;
+	margin: 17.5px;
+}
+</style>
+<title></title>
+</head>
+
+<body id="bodystyle">
+
+<div id="contentwrap">
+	<div id="heading">
+		Grumpy Cat For Sale!
+	</div>
+	
+	<div id="imgdiv">
+		<img id="myImage" onclick="changeImage()" src="http://newton.ncc.edu/gansonj/ite154/img/grumpcat.png" />
+	</div>
+	
+	
+<p>Click the cat to make him go away or come back.</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("bkgimg")) {
+        image.src = "http://newton.ncc.edu/gansonj/ite154/img/grumpcat.png";
+    } else {
+        image.src = "http://newton.ncc.edu/~gansonj/ite154/img/bkgimg.jpg";
+    }
+}
+</script>
+
+	<div id="footer">
+		Who Wants This Cat!?
+	</div>
+</div><!-- ends div#contentwrap -->	
+	
+<div id="contentwrap2">
+	<div id="heading">
+		Grumpy Cat.
+	</div>
+	
+	<div id="imgdiv">
+		<img src="http://newton.ncc.edu/gansonj/ite154/img/grumpcat.png" />
+	</div>
+	<div id="footer">
+		Do It.
+	</div>
+
+</div><!-- ends div#contentwrap2 -->
+</body>
+</html>
