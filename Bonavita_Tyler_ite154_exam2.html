@@ -1,0 +1,147 @@
+<html>
+<head>
+
+<title></title>
+
+<script type="text/javascript">
+function examFunction() {
+
+var startnum = parseInt( document.getElementById("startnum").value );
+var endnum = parseInt( document.getElementById("endnum").value );
+var sumcount = 0;
+//begin table construction, must build first row before loop,
+//because we dont want to repeat the first row over and over
+
+var max = endnum;
+document.getElementById("max").innerHTML = "<div class='redmax'>" + max;
+
+var msg = "<table border='1' width='25%'>";
+msg = msg + "<tr>";
+msg += "</tr>";
+for( var sumcount = startnum; sumcount <= endnum; sumcount++ ) {}
+// use a loop to help construct remaining rows
+for( var count = startnum; count <= endnum; count++ ) {
+msg +="<tr>";
+
+if (count%5 == 0) sumcount--;
+if (count%3 == 0 && count%2 == 0) msg += "<td>" + " Hey now!!!";
+else msg += "<td>" + count;
+msg += "</tr>";
+
+}//end for loop
+
+
+msg += "</table>";
+ 
+document.getElementById("output").innerHTML = msg;
+document.getElementById("sumcount").innerHTML = sumcount;
+}
+
+</script>
+
+<style type="text/css">
+
+body {
+	background: black;
+	background-image: url("http://newton.ncc.edu/gansonj/ite154/img/stars.jpg");
+	color: black;
+	font-family: arial;
+	text-align: center;
+	font-weight: bold;
+}
+
+#contentwrap {
+	background-image: url("http://newton.ncc.edu/gansonj/ite154/img/nebula.jpg");
+	background-color: #000000;
+	background-repeat: no-repeat;
+	background-position: right;
+	width: 600px;
+	min-height: 400px;
+	margin: 20px auto 20px auto;
+	border: 2px orange solid;
+	border-radius: 15px;
+}
+
+#formwrap {
+	background: lightyellow;
+	color: darkblue;
+	margin: 30px;
+	font-size: 1em;
+	padding: 10px;
+	border-radius: 15px;
+	border: 4px solid darkblue;
+	opacity:0.8;
+}
+
+#titlewrap {
+	color: darkred;
+	margin-bottom: 20px;
+	font-size: 1.75em;
+}
+
+#results {
+	background: lightblue;
+	color: darkred;
+	padding: 10px;
+	border-radius: 15px;
+	border: 4px solid darkred;
+	opacity: 1.0;
+	font-size: .95em;
+}
+
+input {
+	font-weight: bold;
+	font-size: 1em;
+	padding: 2px 5px 2px 5px;
+	border: 1px solid darkred;
+}
+
+.redmax {
+color: red;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<div id="contentwrap">
+
+	<div id="formwrap">
+	
+		<div id="titlewrap">
+			ITE 154 Exam #2
+		</div>
+
+		<form>
+		
+			<div>Enter First Number</div>
+			<input type="text" size="20" id="startnum">
+			<p />
+
+			<div>Enter Second Number</div>
+			<input type="text" size="20" id="endnum">
+			<p />
+			
+			
+			<div style="margin-top:10px;">
+				<input type="button" value="Click Me" onClick="examFunction()">
+			</div>
+			
+		</form>
+		
+		<div id="max"></div> <!-- maximum number given by user-->
+		
+		<div id="resultswrap">
+		
+			<div id="output"></div>
+			<div id="sumcount"></div>
+		</div>
+
+	</div> <!-- closes formwrap div -->
+
+</div> <!-- closes pagewrap div -->
+
+</body>
+</html>

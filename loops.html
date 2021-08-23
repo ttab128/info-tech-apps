@@ -1,0 +1,106 @@
+<html>
+<head>
+<title></title>
+ 
+<script type="text/javascript">
+ 
+function printNums() {
+ 
+var endnum = parseInt( document.getElementById("endnum").value );
+var msg = "";
+ 
+// now we are ready to print all numbers from 1 to endnum
+// we will use a loop to perform this action
+for( var count = 1; count <= endnum; count++ ) {
+ 
+msg = msg + "<div>" + count + "</div>";
+ 
+} // ends FOR loop
+ 
+document.getElementById("results").innerHTML = msg;
+ 
+ 
+}
+ 
+</script>
+ 
+ 
+<style type="text/css">
+ 
+body {
+background-color: #F3EFE0;
+font-family: arial;
+color: #217C7E;
+}
+ 
+#contentwrap {
+ 
+border: 8px #9A3334 solid;
+padding: 20px;
+width: 600px;
+margin: 20px auto 0px auto;
+border-radius: 25px;
+text-align: center;
+background: white;
+}
+ 
+#heading {
+font-size: 2.2em;
+border-bottom: 6px #217C7E double;
+padding: 10px 0px 10px 0px;
+color: darkred;
+}
+ 
+#formdiv {
+text-align: center;
+padding-top: 25px;
+}
+ 
+.formtext {
+text-align: center;
+font-size: 1.29em;
+margin-top: 20px;
+}
+ 
+#endnum {
+background-color: lightgray;
+border: 2px darkred solid;
+}
+ 
+#result {
+font-size: 1em;
+color: #FF0000;
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+ 
+<div id="contentwrap">
+ 
+<div id="heading">My First Loop</div>
+ 
+<div id="formdiv">
+ 
+<form>
+ 
+<div id="formtext">Enter ending number</div>
+<input type="text" id="endnum" />
+ 
+<div style="margin-top:15px;">
+<input type="button" value="Show Nums" onClick="printNums()" />
+</div>
+ 
+</form>
+ 
+<div id="results"></div>
+ 
+</div>
+ 
+</div> <!-- ends div#contentwrap -->
+ 
+</body>
+</html>
